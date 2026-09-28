@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ConnectMotors – Garagem de carros em Bento Gonçalves</title>
+<meta name="description" content="ConnectMotors | Garagem de carros em Bento Gonçalves. Veículos selecionados, procedência e as melhores condições na Rua Pernambuco, 200.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23e2060e'/><text x='50' y='66' font-size='36' font-family='Arial' font-weight='900' fill='white' text-anchor='middle'ConnectMotors</text></svg>">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>📍 Rua Pernambuco, 200, Bento Gonçalves - RS</span>
+    <span class="topbar-right">⏰ Seg a Sex 08:30–18:30 · Sáb 08:30–16:00 &nbsp;|&nbsp; 📞 (54) 99216-1879</span>
+  </div>
+</div>
+
+<!-- HEADER (idêntico Viggo) -->
+<header class="header" id="topo">
+  <div class="container header-inner">
+    <a href="#topo" class="logo">
+      <div class="logo-badge">CN</div>
+      <div class="logo-text"><strong>CONNECTMOTORS</strong><small>MULTIMARCAS • BENTO GONÇALVES</small></div>
+    </a>
+    <nav class="nav" id="navMenu">
+      <a href="#topo" class="active">Home</a>
+      <div class="dropdown">
+        <a href="#estoque" class="drop-btn">Marcas ▾</a>
+        <div class="drop-list" id="dropMarcas"></div>
+      </div>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#estoque" id="linkFavs">Meus Favoritos <span class="fav-count" id="favCount">0</span></a>
+      <a href="#" id="openSimulador">Simulador de Financiamento</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20ConnectMotors%20Multimarcas%20e%20quero%20ver%20as%20ofertas." target="_blank" aria-label="WhatsApp">✆</a>
+      <a class="icon-btn" href="tel:+5554992161879" aria-label="Ligar">☎</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#topo">Home</a>
+    <a href="#estoque">Estoque</a>
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#" id="openSimuladorM">Simulador de Financiamento</a>
+    <a href="#localizacao">Localização</a>
+    <a href="https://wa.me/5554992161879" target="_blank" class="btn-red">Chamar no WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO / BANNER (slider estilo Viggo - clicável) -->
+<section class="hero" id="heroSlider">
+  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80')">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="pill">🚗 Garagem de carros • Bento Gonçalves</span>
+      <h1>20 OFERTAS <span>REAIS</span><br>EM BENTO GONÇALVES</h1>
+      <p>Tradição, confiança e procedência. Saia de carro novo hoje mesmo com as melhores condições da região.</p>
+      <div class="hero-btns">
+        <a href="#estoque" class="btn-red" data-scroll>Ver estoque</a>
+        <a href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20vendedor%20da%20ConnectMotors." target="_blank" class="btn-white">📲 Falar com vendedor</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>20 ofertas</strong><small>Carros + motos</small></div>
+        <div><strong>Rua Pernambuco, 200</strong><small>São Ciro • Bento Gonçalves</small></div>
+        <div><strong>Aprovado</strong><small>Financiamento facilitado</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1600&q=80')">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="pill">💰 Financiamento facilitado</span>
+      <h1>SIMULE E <span>SAIA DE CARRO NOVO</span><br>HOJE MESMO</h1>
+      <p>Entrada facilitada e parcelas que cabem no bolso. Aprovação rápida no WhatsApp.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-red" id="heroSimular">Simular financiamento</a>
+        <a href="#estoque" class="btn-white" data-scroll>Ver ofertas</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80')">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="pill">📍 Rua Pernambuco, 200, 871 • Bento Gonçalves</span>
+      <h1>VISITE NOSSA <span>GARAGEM</span><br>EM BENTO GONÇALVES</h1>
+      <p>Amplo estoque se renovando toda semana. Seg a Sex 08:30 – 12:00 / 13:30 – 18:00 • Sáb 9h–12h.</p>
+      <div class="hero-btns">
+        <a href="#localizacao" class="btn-red" data-scroll>Como chegar</a>
+        <a href="tel:+5554992161879" class="btn-white">📞 (54) 99216-1879</a>
+      </div>
+    </div>
+  </div>
+  <button class="hero-arrow prev" id="heroPrev" aria-label="Anterior">‹</button>
+  <button class="hero-arrow next" id="heroNext" aria-label="Próximo">›</button>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- MARCAS POPULARES -->
+<section class="brands">
+  <div class="container">
+    <div class="section-head"><h2>Marcas Populares</h2><a href="#estoque" id="verTodasMarcas" data-scroll>Ver todas →</a></div>
+    <div class="brands-row" id="brandsRow"></div>
+    <small class="brands-note">Logos oficiais das montadoras • clique para filtrar o estoque</small>
+  </div>
+</section>
+
+<!-- ESTOQUE - FORMATO PRINT VIGGO -->
+<main class="container" id="estoque" style="padding:18px 16px">
+  <!-- Barra superior pesquisar + ordenar (igual print) -->
+  <div class="search-top">
+    <div class="search-top-row">
+      <input type="text" id="fBuscaTop" placeholder="Pesquisar Veículos">
+      <button class="btn-red" id="btnBuscarTop" type="button">Buscar</button>
+    </div>
+    <div class="search-top-sub">
+      <span id="countTxt">Exibindo: 12 de 12 Veículos disponíveis</span>
+      <label style="margin-left:auto">Ordenar por:
+        <select id="fOrdem"><option value="recente">Mais Recente</option><option value="menor">Menor Valor</option><option value="maior">Maior Valor</option><option value="menorkm">Menor Km</option><option value="anoNovo">Ano Mais Novo</option></select>
+      </label>
+    </div>
+  </div>
+
+  <div class="estoque-wrap" style="padding:14px 0">
+  <aside class="filters">
+    <div class="filter-box">
+      <h3>FILTROS <button id="clearFilters" class="link" type="button">Limpar Filtros</button></h3>
+      <label>Código de Referência</label>
+      <div style="display:flex;gap:6px"><input type="text" id="fCodigo" placeholder="Buscar por código" style="flex:1"><button class="btn-red" id="btnCod" type="button" style="padding:11px 13px">⌕</button></div>
+      <label class="check"><input type="radio" name="sup" id="fSuper"> Super Oferta</label>
+      <label>Estado</label>
+      <label class="check"><input type="checkbox" class="fEst" value="Zero Km"> Zero Km</label>
+      <label class="check"><input type="checkbox" class="fEst" value="Semi-novo" checked> Semi-novo</label>
+      <label class="check"><input type="checkbox" class="fEst" value="Usado" checked> Usado</label>
+      <label>Marcas</label>
+      <select id="fMarca"><option value="todas">Mostrar Todas</option></select>
+      <label>Modelos</label>
+      <select id="fModelo"><option value="todos">Mostrar Todos</option></select>
+      <label>Versão</label>
+      <select id="fVersao"><option value="todas">Mostrar Todas</option><option>1.0</option><option>1.6</option><option>1.8</option><option>2.0</option></select>
+      <label>Valor</label>
+      <input type="range" id="fValor" min="0" max="129000" step="1000" value="129000">
+      <small id="valLabel">R$ 0 – R$ 129.000</small>
+      <label>Quilometragem</label>
+      <input type="range" id="fKm" min="0" max="189000" step="5000" value="189000">
+      <small id="kmLabel">0Km – 189.000Km</small>
+      <label>Câmbio</label>
+      <select id="fCambio"><option value="todos">Todos os Câmbios</option><option>Manual</option><option>Automático</option></select>
+      <label>Combustível</label>
+      <select id="fComb"><option value="todos">Todos os Combustíveis</option><option>Flex</option><option>Gasolina</option><option>Diesel</option></select>
+      <label>Carroceria</label>
+      <select id="fCarro"><option value="todas">Todas as Carrocerias</option><option>Hatchback</option><option>Sedan</option><option>SUV</option><option>Pickup</option></select>
+      <label>Etiqueta</label>
+      <label class="check"><input type="checkbox" class="fEtiq" value="Raridade"> Raridade</label>
+      <label class="check"><input type="checkbox" class="fEtiq" value="Segundo Dono"> Segundo Dono</label>
+      <label class="check"><input type="checkbox" class="fEtiq" value="Super Novo"> Super Novo</label>
+      <label class="check"><input type="checkbox" class="fEtiq" value="Único Dono"> Único Dono</label>
+      <label class="check"><input type="checkbox" id="fFav"> ❤ Somente favoritos</label>
+      <input type="hidden" id="fBusca"><input type="hidden" id="fModeloHidden">
+      <button class="btn-red full" id="btnBuscar" type="button" style="margin-top:10px">🔍 Buscar</button>
+      <button class="btn-outline full" id="btnLimparTopo" type="button" style="margin-top:8px">Limpar</button>
+    </div>
+    <div class="filter-box dark">
+      <h4>💰 Simule seu financiamento</h4>
+      <p>Entrada + parcelas que cabem no bolso.</p>
+      <button class="btn-red full" id="openSimulador2" type="button">Simular agora</button>
+      <a class="big-btn wa pulse-wa" target="_blank" href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Quero%20uma%20oferta%20da%20ConnectMotors%20Multimarcas." style="margin-top:10px">WhatsApp da loja</a>
+    </div>
+  </aside>
+
+  <section class="grid-area">
+    <div class="grid grid-print" id="vehicleGrid"></div>
+  </section>
+  </div>
+</main>
+
+<!-- DESTAQUES -->
+<section class="destaques">
+  <div class="container">
+    <div class="section-head"><h2 style="color:#fff">Veículos em Destaque</h2><a href="#estoque" data-scroll style="color:#ff5b60">Ver estoque →</a></div>
+    <div class="grid" id="destaqueGrid"></div>
+  </div>
+</section>
+
+<!-- QUEM SOMOS (idêntico Viggo) -->
+<section class="sobre" id="sobre">
+  <div class="container sobre-inner">
+    <div class="reveal">
+      <h4>QUEM SOMOS NÓS?</h4>
+      <h2>ConnectMotors MULTIMARCAS</h2>
+      <p>Na Rua Pernambuco, 200 — Bento Gonçalves, 40 veículos no pátio!</p>
+      <p>Na <strong>ConnectMotors</strong> você encontra <strong>20 seminovos — do Voyage 1989 à Toro Diesel R$138.000</strong> — com procedência e preço justo na Rua Pernambuco, 200, em Bento Gonçalves.</p>
+      <p>Do DS3 R.900 ao Camaro V8 R.900!</p>
+      <p><strong>Venha conhecer de perto e saia de carro novo.</strong></p>
+      <div class="sobre-btns">
+        <a class="btn-red" href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Quero%20conhecer%20o%20estoque%20da%20ConnectMotors%20Multimarcas." target="_blank">Agendar visita</a>
+        <a class="btn-outline" href="#localizacao">Como chegar</a>
+        <a class="btn-outline" target="_blank" href="https://acheveiculos.com/busca/revenda/connectmotors/estoque">Ver estoque oficial</a>
+      </div>
+    </div>
+    <div class="sobre-img reveal">
+      <img src="https://images.unsplash.com/photo-1562141961-b5d0864b8d0f?auto=format&fit=crop&w=900&q=80" alt="Loja ConnectMotors">
+      <div class="sobre-card">🚗 20 ofertas ativas<br><small>Portal CarrosNaSerra</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS / PORTAIS -->
+<section class="avaliacoes" id="avaliacoes">
+  <div class="container">
+    <div class="section-head"><h2>Por que comprar na ConnectMotors?</h2><span class="rating">20 ofertas • Bento Gonçalves</span></div>
+    <div class="rev-grid">
+      <div class="rev reveal"><p>"Premium 4x4: Wrangler, Bronco, Rampage, X6, SW4, Equinox."</p><strong>— Wrangler • Bronco • Rampage</strong><small>Camaro • X6 • A3 • Tracker</small></div>
+      <div class="rev reveal"><p>"Atendimento direto no WhatsApp (54) 99216-1879, sem enrolação."</p><strong>— Bento Gonçalves • Bento Gonçalves</strong><small>Rua Pernambuco, 200</small></div>
+      <div class="rev reveal"><p>"Revisados e com garantia, todas as financeiras, melhor taxa."</p><strong>— (54) 99216-1879 • Venda seu veículo</strong><small>🌐 acheveiculos.com/busca/revenda/connectmotors</small></div>
+    </div>
+    <div style="text-align:center;margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a class="btn-red" target="_blank" href="https://acheveiculos.com/busca/revenda/connectmotors/estoque">Ver estoque oficial</a>
+      <a class="btn-outline" target="_blank" href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Quero%20vender%20meu%20ve%C3%ADculo.">Vender meu veículo</a>
+      <a class="btn-outline" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+Pernambuco,+200,+Bento+Goncalves">Avaliar no Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO + CONTATO + HORÁRIOS -->
+<section class="loc" id="localizacao">
+  <div class="container loc-inner">
+    <div class="reveal">
+      <h2>Localização</h2>
+      <p><strong>ConnectMotors | Bento Gonçalves</strong><br>Rua Pernambuco, 200 – Bento Gonçalves/RS</p>
+      <div class="map">
+        <iframe title="Mapa ConnectMotors" loading="lazy" src="https://www.google.com/maps?q=Rua+Pernambuco,+200,+Bento+Goncalves&output=embed"></iframe>
+      </div>
+      <a class="btn-red" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+Pernambuco,+200,+Bento+Goncalves">Abrir no Google Maps</a>
+    </div>
+    <div class="contact-card reveal">
+      <h3>Fale conosco</h3>
+      <a class="big-btn wa pulse-wa" target="_blank" href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20uma%20oferta.">📲 WhatsApp • (54) 99216-1879</a>
+      <a class="big-btn" target="_blank" href="https://www.instagram.com/bentomotors">📸 Instagram • @bentomotors</a><a class="big-btn" target="_blank" href="https://acheveiculos.com/busca/revenda/connectmotors">🌐 Ver no AcheVeículos</a>
+      <div class="hours">
+        <h4>Horários de atendimento</h4>
+        <div><span>Segunda a Sexta</span><strong>08:30 – 12:00 / 13:30 – 18:00</strong></div>
+        <div><span>Sábado</span><strong>08:30 – 12:00</strong></div>
+        <div class="closed"><span>Domingo e Feriados</span><strong>Fechado</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (padrão Viggo + crédito William) -->
+<footer>
+  <div class="container foot-grid">
+    <div>
+      <div class="logo"><div class="logo-badge">CN</div><div class="logo-text"><strong>CONNECTMOTORS</strong><small>MULTIMARCAS</small></div></div>
+      <p>Lojas de Veículos<br>Todos os direitos reservados</p>
+      <div class="social">
+        <a target="_blank" title="Google Maps" aria-label="Google Maps" href="https://www.google.com/maps/search/?api=1&query=Rua+Pernambuco+200+Bento+Goncalves">G</a>
+        <a target="_blank" title="WhatsApp" aria-label="WhatsApp" href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20ConnectMotors.">W</a>
+        <a title="Ligar" aria-label="Ligar" href="tel:+5554992161879">T</a>
+        <a target="_blank" title="Portal" aria-label="Portal" href="https://acheveiculos.com/busca/revenda/connectmotors">🌐</a>
+      </div>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p>📍 Rua Pernambuco, 200<br>Bento Gonçalves/RS</p>
+      <p>📞 (54) 99216-1879</p>
+      <p>🌐 Sem site • Só AcheVeículos</p>
+    </div>
+    <div>
+      <h4>Horários</h4>
+      <p>Segunda a Sexta: 09:00 – 12:00 / 13:30 – 18:30</p>
+      <p>Sábados: 09:00 – 12:00</p>
+      <p>Domingos e Feriados: Fechado</p>
+    </div>
+  </div>
+  <div class="copy">2026 © ConnectMotors. Todos os direitos reservados. • <a class="dev" target="_blank" href="https://wa.me/5554984074067?text=Oi%2C%20vim%20pelo%20site%20da%20ConnectMotors%20Multimarcas%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20a%20cria%C3%A7%C3%A3o%20do%20meu%20site%20pr%C3%B3prio.">Site criado por William Schmitt</a></div>
+</footer>
+
+<a class="float-wa pulse-wa" target="_blank" href="https://wa.me/5554992161879?text=Ol%C3%A1!%20Quero%20ver%20as%20ofertas%20da%20ConnectMotors." aria-label="WhatsApp"><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg> WhatsApp</a>
+
+<!-- MODAL SIMULADOR -->
+<div class="overlay" id="ovSim">
+  <div class="modal">
+    <button class="close" data-close>×</button>
+    <h3>Simulador de Financiamento</h3>
+    <label>Valor do veículo (R$)</label><input type="number" id="sValor" value="58900">
+    <label>Entrada (R$)</label><input type="number" id="sEntrada" value="15000">
+    <label>Parcelas</label>
+    <select id="sN"><option>12</option><option>24</option><option selected>36</option><option>48</option><option>60</option></select>
+    <button class="btn-red full" id="sCalc">Calcular</button>
+    <div class="sim-res" id="sRes">Escolha os valores e clique em calcular.</div>
+    <a class="btn-red full" target="_blank" id="sWa" href="https://wa.me/5554992161879">Enviar simulação no WhatsApp</a>
+  </div>
+</div>
+
+<!-- MODAL DETALHES -->
+<div class="overlay" id="ovDet">
+  <div class="modal wide">
+    <button class="close" data-close>×</button>
+    <div id="detBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
