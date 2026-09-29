@@ -118,7 +118,7 @@ function openDet(code){
   $("detBody").innerHTML=`<div class="det-grid"><div><img src="${v.img}"><div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><span class="badge" style="position:static">${v.state}</span>${v.tag?`<span class="badge oferta" style="position:static">${v.tag}</span>`:""}</div></div>
   <div><span class="code">Código ${v.code}</span><h2>${v.brand} ${v.model}</h2><p>${v.version}</p>
   <div class="price" style="font-size:28px;margin:8px 0">${fmt(v.price)}</div>
-  <p>📅 ${v.year} • 🛣️ ${v.km.toLocaleString("pt-BR")} km<br>⛽ ${v.fuel} • ⚙️ ${v.gear}<br>📍 ConnectMotors – Rua Pernambuco, 200, 13205, Bento Gonçalves</p>
+  <p>📅 ${v.year} • 🛣️ ${v.km.toLocaleString("pt-BR")} km<br>⛽ ${v.fuel} • ⚙️ ${v.gear}<br>📍 ConnectMotors – Rua Pernambuco, 200, Bento Gonçalves</p>
   <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><a class="btn-red" target="_blank" href="https://wa.me/${WA}?text=${encodeURIComponent("Olá! Tenho interesse no "+v.brand+" "+v.model+" "+v.version+" código "+v.code+". Ainda está disponível?")}">Tenho interesse</a>
   <button class="btn-outline" onclick="document.getElementById('ovDet').classList.remove('open')">Fechar</button></div></div></div>`;
   $("ovDet").classList.add("open");document.body.style.overflow="hidden";
